@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'img/carousel-1.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Best Plateform for Braille Translation</h1>
+          <p>Translate Braille to any langauge you want</p>
+          <a href="#" class="btn btn-md btn-primary btn-outline-success text-light">Convert</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/carousel-4.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>A World Where Everyone Can Read and Write</h1>
+          <p>Make your speech readable to visually disabled</p>
+          <a href="#" class="btn btn-md btn-primary btn-outline-success text-light">Translate</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/carousel-3.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Learn Braille With Us</h2>
+          <h2>First Ever Speech To Braille Converter</h2>
+          <a href="#" class="btn btn-md btn-primary btn-outline-success text-light">Learn Here</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="d-block text-center mt-5">
+    <p class="text-muted">Start Here</p>
+    <h1 class="heading-title mt-4">BRAILLE TRANSLATOR</h1>
+    <!-- Example split primary button -->
+    <!-- Large button groups (default and split) -->
+    <div class="d-flex justify-content-center align-items-center my-4">
+      <label class="form-label m-2">From</label>
+      <select class="form-select m-2" aria-label="Default select example" style="width: 200px; float: right;">
+        <option selected>Choose langauge</option>
+        <option value="1">English</option>
+        <option value="2">Hindi</option>
+      </select>
+      <img src="{% static 'img/swap.png' %}" class="img-responsive" style="width:40px; height:40px">
+      <label class="form-label m-2">To</label>
+      <select class="form-select m-2" aria-label="Default select example" style="width: 200px; float: right;">
+        <option selected>Braille</option>
+      </select>
+    </div>
+    <div class="form-outline m-2  my-4 p-3">
+      <textarea class="form-control" id="textAreaExample" rows="4" placeholder="Write Text Here You Want to Convert"></textarea>
+    </div>
+    <a href="#" class="btn btn-md btn-primary btn-outline-success text-light">Translate</a>
+    <div class="form-outline m-2  my-4 p-3">
+      <textarea class="form-control" id="textAreaExample" rows="4" placeholder="Converted Text" readonly></textarea>
+    </div>
+  </div>
+  
+{% endblock %}
